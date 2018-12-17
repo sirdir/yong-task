@@ -57,16 +57,16 @@ public class WorkWithStringTest {
 
     @Test
     public void digits() {
-        String containsSpaces = "9991222222";
+        String containsSpaces = "9991ggg222222";
         String actual = wws.countCharsInARow(containsSpaces);
-        Assert.assertEquals("391162", actual);
+        Assert.assertEquals("39113g62", actual);
     }
 
     @Test
     public void escapedSymbols() {
-        String containsSpaces = "aa\n\n\n\n\"\"\t\t\t\n";
+        String containsSpaces = "aa\n\n\n\n\"\"\t\t\t\nbbb";
         String actual = wws.countCharsInARow(containsSpaces);
-        Assert.assertEquals("2a4\n2\"3\t1\n", actual);
+        Assert.assertEquals("2a4\n2\"3\t1\n3b", actual);
     }
 
 }
